@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col } from 'reactstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import NavBar from './components/navbar.component';
+import InputComp from './components/input.component';
+import FooterComp from './components/footer.component';
+
+const App = props => {
+	return (
+		<div>
+			{' '}
+			<NavBar />
+			<Container fluid>
+				<Row></Row>
+				<br />
+				<br />
+				<br />
+				<Row>
+					<Col md="4"></Col>
+					<Col md="4">
+						<InputComp />
+					</Col>
+					<Col md="4"></Col>
+				</Row>
+				<Row></Row>
+			</Container>
+			<br />
+			<br />
+			<br />
+			<br />
+			<FooterComp />
+		</div>
+	);
+};
 
 export default App;
